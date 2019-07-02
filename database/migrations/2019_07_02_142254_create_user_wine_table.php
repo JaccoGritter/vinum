@@ -15,6 +15,9 @@ class CreateUserWineTable extends Migration
     {
         Schema::create('user_wine', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('wine_id');
+            $table->unsignedInteger('user_id');
+            $table->double('price');
             $table->timestamps();
         });
     }
