@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- CSRF Token -->
+     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Vinum</title>
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="{{ asset('css/vinum.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,thin" rel="stylesheet">
@@ -19,11 +23,17 @@
         <ul>
 
             <li><a href="#">OVER</a></li>
-            <li><a href="#">LOGIN</a></li>
-            <li><a href="#">LOGOUT</a></li>
-            <li><a href="#">REGISTREER</a></li>
+            <li><a href="{{ route('login') }}">LOGIN</a></li>
+            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('LOGOUT') }}</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+            <li><a href="{{ route('register') }}">REGISTREER</a></li>
             <li><a href="#">WINKELMANDJE</a></li>
-            <li>Guest</li>
+            <li>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</li>
             <li><a href="/"><img src="img/vinumlogosmall.jpg" alt="logosmall" height=40></a></li>
         </ul>
     </div>

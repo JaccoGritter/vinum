@@ -38,7 +38,14 @@ body {
     padding-top: 80px;
 }
 
-/* .btn-primary { background-color: #7B0954; } */
+.authcontainer {
+    color: black;
+}
+
+.dropdown-menu-right a {
+    color: #7B0954;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #7B0954;
