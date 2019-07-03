@@ -1,9 +1,11 @@
 body {
-    background-color: #DEC2D4;
+    /* background-color: #DEC2D4; */
+    background-color: rgb(14, 12, 12);
     color: #fff;
 }
 
 .mynavbar {
+    z-index: 5;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     padding-top: 18px;
@@ -46,4 +48,8 @@ body {
     color: #fff;
     background-color: #DEC2D4;
     border-color: #7B0954; 
+}
+
+.searchresults {
+    display: flex;
 }

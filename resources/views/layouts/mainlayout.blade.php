@@ -24,13 +24,13 @@
             <li><a href="#">REGISTREER</a></li>
             <li><a href="#">WINKELMANDJE</a></li>
             <li>Guest</li>
-            <li><a href="#"><img src="img/vinumlogosmall.jpg" alt="logosmall" height=40></a></li>
+            <li><a href="/"><img src="img/vinumlogosmall.jpg" alt="logosmall" height=40></a></li>
         </ul>
     </div>
 
     <div class="container-fluid maincontainer">
         <div class="row">
-            <div class="col-md-6 containerleft pl-5 pr-5">
+            <div class="col-md-6 containerleft pl-5">
              <img src="img/vinumlogo.jpg" alt="logo" height=240>
              <img src="img/slogan.png" alt="slogan" >
                 @yield('leftcontent')

@@ -4,25 +4,30 @@
 
 <h3>Zoek uw wijn:</h3>
 
-<form action="/action_page.php" method="get">
+<form action="/search" method="get">
   <div class="form-group">
-    <label for="merk">Merk:</label>
-    <input type="text" class="form-control" id="merk">
+    <label for="brand">Merk:</label>
+    <input type="text" class="form-control" id="brand" name="brand">
   </div>
 
   <div class="form-group">
-  <label for="type">Type</label>
-        <select class="form-control" id="type" name="type">
+    <label for="name">Naam</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+
+  <div class="form-group">
+  <label for="variety">Type</label>
+        <select class="form-control" id="variety" name="variety">
             <option value="">Alle</option>
             <option value="Rood">Rood</option>
             <option value="Wit">Wit</option>
-            <option value="Rose">Rosé</option>
+            <option value="Rosé">Rosé</option>
         </select>
   </div>
 
   <div class="form-group">
-  <label for="land">Land</label>
-        <select class="form-control" id="land" name="land">
+  <label for="country">Land</label>
+        <select class="form-control" id="country" name="country">
             <option value="">Alle</option>
             <option value="Frankrijk">Frankrijk</option>
             <option value="Spanje">Spanje</option>
@@ -30,11 +35,6 @@
             <option value="Chili">Chili</option>
             <option value="Australie">Australië</option>
         </select>
-  </div>
-
-  <div class="form-group">
-    <label for="druif">Druivensoort</label>
-    <input type="text" class="form-control" id="druif">
   </div>
   
   <button type="submit" class="btn btn-primary">Zoek</button>

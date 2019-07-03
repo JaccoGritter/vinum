@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/search', 'WineController@searchWines');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
