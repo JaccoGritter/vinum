@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Wine;
+use App\Order;
+use Auth;
 
 class WineController extends Controller
 {
@@ -27,8 +29,6 @@ class WineController extends Controller
 
         $wines = Wine::where('brand', 'like', "%".$brand."%")->where('name', 'like', "%".$name."%")->where('variety', 'like', "%".$variety."%")->where('country', 'like', "%".$country."%")->get();
 
-        // $wines = Wine::where('brand', 'like', "%".$brand."%")->where('name', 'like', "%".$name."%")->get();
-
         return view ('searchresults', compact('wines'));
     }
 
@@ -36,5 +36,28 @@ class WineController extends Controller
 
         return view('show', compact('wine'));
     }
+    
+    public function addToCart(Wine $wine){
 
+        if (!Auth::check()) {
+
+            return redirect()->route('index');
+
+        } else {
+
+            $user = Auth::user();
+            $order = new Order;
+            $order->user_id = $user->id;
+            $order->wine_id = $wine->id;
+            $order->quantity = 1;
+            $order->price = $wine->price;
+
+            $order->save();
+
+            $wine->decrement('units');
+
+            return view('addtocart', compact('wine'));
+        }
+
+    }
 }

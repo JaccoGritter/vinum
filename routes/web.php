@@ -13,11 +13,13 @@ use App\Http\Controllers\WineController;
 */
 
 
-Route::get('/', 'WineController@index');
+Route::get('/', 'WineController@index')->name('index');
 
 Route::get('/search', 'WineController@searchWines');
 
 Route::get('/show/{wine}', 'WineController@show')->name('show');
+
+Route::get('/addtocart/{wine}', 'WineController@addToCart')->name('addtocart');
 
 Auth::routes();
 
