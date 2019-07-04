@@ -53,6 +53,7 @@
     <h5>{{ $wine->brand }}</h5>
     <h5>{{ $wine->name }}</h5>
     <h5><b><em>Van <strike>€{{(number_format( $wine->price, 2 , "," , ".")) }}</strike> voor €{{(number_format( $wine->price * 0.80, 2 , "," , ".")) }}</em></b></h5>
-    <img src="{{$wine->picture()}}" alt="wijn">
+    <br>
+    <a href="{{ route('show', $wine->id) }}"><img src="{{$wine->picture()}}" alt="wijn"></a>
 
 @endsection
