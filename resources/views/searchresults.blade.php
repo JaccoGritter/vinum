@@ -34,7 +34,7 @@
             <tr><th>Type:</th><td>{{$wine->variety}}</td></tr>
             <tr><th>Druif:</th><td>{{$wine->grapes}}</td></tr>
             <tr><th>Herkomst:</th><td>{{$wine->country}}</td></tr>
-            <tr><th>Prijs:</th><td>€{{$wine->price}}</td></tr>
+            <tr><th>Prijs:</th><td>€{{(number_format( $wine->price, 2 , "," , ".")) }}</td></tr>
             </table>
         </div>
         
