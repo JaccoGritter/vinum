@@ -33,7 +33,12 @@
                                     </form>
                                 </li>
             <li><a href="{{ route('register') }}">REGISTREER</a></li>
-            <li><a href="#"><i class="fas fa-shopping-basket fa-2x"></i></a></li>
+
+            <li>
+                <a href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
+                <b>{{ Auth::check() ? count(Auth::user()->wines) : '' }}</b>
+            </li>
+
             <li>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</li>
             <li><a href="/"><img src = "{{ asset('img/vinumlogosmall.jpg') }}" alt="logosmall" height=40></a></li>
         </ul>
