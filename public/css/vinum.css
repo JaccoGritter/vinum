@@ -4,6 +4,12 @@ body {
     color: #fff;
 }
 
+@media only screen and (max-width: 812px) {
+    .checkwidth { 
+        display: none;
+    }
+}
+
 .mynavbar {
     z-index: 5;
     font-family: 'Roboto', sans-serif;
