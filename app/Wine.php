@@ -17,6 +17,7 @@ class Wine extends Model
         } else {
             return '/img/winepics/wijn2.jpg';
         }     
+
     }
 
 }

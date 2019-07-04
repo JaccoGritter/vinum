@@ -38,6 +38,10 @@ body {
     padding-top: 80px;
 }
 
+.containerright {
+    text-align: center;
+}
+
 .authcontainer {
     color: black;
 }
