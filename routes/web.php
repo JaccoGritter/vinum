@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\WineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,11 +12,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/', 'WineController@index');
 
 Route::get('/search', 'WineController@searchWines');
+
+Route::get('/show/{wine}', 'WineController@show')->name('show');
 
 Auth::routes();
 

@@ -34,15 +34,15 @@
             <li><a href="{{ route('register') }}">REGISTREER</a></li>
             <li><a href="#">WINKELMANDJE</a></li>
             <li>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</li>
-            <li><a href="/"><img src="img/vinumlogosmall.jpg" alt="logosmall" height=40></a></li>
+            <li><a href="/"><img src = "{{ asset('img/vinumlogosmall.jpg') }}" alt="logosmall" height=40></a></li>
         </ul>
     </div>
 
     <div class="container-fluid maincontainer">
         <div class="row">
-            <div class="col-md-6 containerleft pl-5">
-             <img src="img/vinumlogo.jpg" alt="logo" height=240>
-             <img src="img/slogan.png" alt="slogan" >
+            <div class="col-md-6 containerleft pl-5 pr-3">
+             <img src="{{ asset('img/vinumlogo.jpg') }}" alt="logo" height=240>
+             <img src="{{ asset('img/slogan.png') }}" alt="slogan" >
                 @yield('leftcontent')
             </div>
 

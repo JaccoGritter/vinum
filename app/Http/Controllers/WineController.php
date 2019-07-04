@@ -7,6 +7,16 @@ use App\Wine;
 
 class WineController extends Controller
 {
+
+    public function index() {
+        // voorlopig een random aanbieding
+        $number = rand(1, 10);
+        $wine = Wine::find($number);
+        
+        return view('index', compact('wine'));
+
+    }
+
     public function searchWines(Request $request) {
 
         $brand = $request->input('brand');
@@ -21,4 +31,10 @@ class WineController extends Controller
 
         return view ('searchresults', compact('wines'));
     }
+
+    public function show(Wine $wine){
+
+        return view('show', compact('wine'));
+    }
+
 }
