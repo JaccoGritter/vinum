@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserWineTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUserWineTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_wine', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('wine_id');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('quantity')->default(0);
+            $table->unsignedInteger('wine_id');
+            $table->unsignedInteger('quantity');
             $table->double('price');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateUserWineTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_wine');
+        Schema::dropIfExists('orders');
     }
 }

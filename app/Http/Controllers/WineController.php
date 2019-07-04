@@ -40,8 +40,7 @@ class WineController extends Controller
     public function addToCart(Wine $wine){
 
         if (!Auth::check()) {
-
-            return redirect()->route('index');
+            return view('loginwarning');
 
         } else {
 

@@ -21,6 +21,10 @@ Route::get('/show/{wine}', 'WineController@show')->name('show');
 
 Route::get('/addtocart/{wine}', 'WineController@addToCart')->name('addtocart');
 
+Route::get('/loginwarning', function() {
+    return view('loginwarning');
+    });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
