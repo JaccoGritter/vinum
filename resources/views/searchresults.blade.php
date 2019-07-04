@@ -46,6 +46,8 @@
     <br>
 @endforeach
 
+{{ $wines->links() }}
+
 <div  class="text-left">
 <a href="/" class="btn btn-primary" role="button">Home</a>
 </div>
