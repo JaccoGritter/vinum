@@ -22,4 +22,10 @@
     
     </table>
 </div>
+
+<div>
+<a href="/" class="btn btn-primary" role="button">Home</a>
+<a href="#" class="btn btn-primary" role="button">In winkelmandje</a>
+</div>
+
 @endsection
