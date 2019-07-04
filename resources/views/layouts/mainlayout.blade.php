@@ -12,6 +12,7 @@
     <title>Vinum</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="{{ asset('css/vinum.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,thin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -32,17 +33,17 @@
                                     </form>
                                 </li>
             <li><a href="{{ route('register') }}">REGISTREER</a></li>
-            <li><a href="#">WINKELMANDJE</a></li>
+            <li><a href="#"><i class="fas fa-shopping-basket fa-2x"></i></a></li>
             <li>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</li>
             <li><a href="/"><img src = "{{ asset('img/vinumlogosmall.jpg') }}" alt="logosmall" height=40></a></li>
         </ul>
     </div>
 
-    <div class="container-fluid maincontainer">
+    <div class="container-fluid maincontainer pl-5 pr-5">
         <div class="row">
-            <div class="col-md-6 containerleft pl-5 pr-3">
+            <div class="col-md-6 containerleft pl-5 pr-1">
              <img src="{{ asset('img/vinumlogo.jpg') }}" alt="logo" height=240>
-             <img src="{{ asset('img/slogan.png') }}" alt="slogan" >
+             <img src="{{ asset('img/slogan.png') }}" alt="slogan" class="checkwidth">
                 @yield('leftcontent')
             </div>
 
