@@ -12,8 +12,12 @@
 @section('rightcontent')
 
 @if ($wines->isEmpty())
-
-    <h5>Er zijn geen wijnen gevonden met deze zoekcriteria</h5>
+    <br><br>
+    <h5>Er zijn helaas geen wijnen gevonden met deze zoekcriteria</h5>
+    <br><br>
+    <div>
+        <a href="/" class="btn btn-primary" role="button">Home</a>
+    </div>
 
 @else
 
@@ -25,7 +29,7 @@
 @foreach ($wines as $wine)
     <div class="searchresults">
         <div>
-            <a href="{{ route('show', $wine->id) }}""><img src="{{$wine->picture()}}" alt="wijn"></a>
+            <a href="{{ route('show', $wine->id) }}"><img src="{{$wine->picture()}}" alt="wijn"></a>
         </div>
         <div class="pl-3">
             <table class="table table-sm table-dark">
@@ -42,11 +46,13 @@
     <br>
 @endforeach
 
-@endif
-
 <div  class="text-left">
 <a href="/" class="btn btn-primary" role="button">Home</a>
 </div>
+
+@endif
+
+
 <br>
 
 @endsection
