@@ -70,9 +70,10 @@ class WineController extends Controller
     public function addOne($id) {
         $order = Order::findOrFail($id);
         $wine = Wine::findOrFail($order->wine_id);
-        $order->increment('quantity');
-        $wine->decrement('units');
-
+        if ($wine->units > 0) {
+            $order->increment('quantity');
+            $wine->decrement('units');
+        }
         $wines = Auth::user()->wines;
         return view('cart', compact('wines'));
 
@@ -81,8 +82,13 @@ class WineController extends Controller
     public function decreaseOne($id) {
         $order = Order::findOrFail($id);
         $wine = Wine::findOrFail($order->wine_id);
-        $order->decrement('quantity');
-        $wine->increment('units');
+        if ($order->quantity > 0) {
+            $order->decrement('quantity');
+            $wine->increment('units');
+            if ($order->quantity == 0) {
+                $order->delete();
+            }
+        }
         
         $wines = Auth::user()->wines;
         return view('cart', compact('wines'));
