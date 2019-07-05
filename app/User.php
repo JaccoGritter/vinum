@@ -39,6 +39,26 @@ class User extends Authenticatable
 
     public function wines()
     {
-        return $this->belongsToMany('App\Wine');
+        return $this->belongsToMany('App\Wine')->withPivot('quantity', 'myprice');
     }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    public function getCartQuantity() {
+        return $this->orders->sum('quantity');
+    }
+
+    public function getOrderValue() {
+        $sum = 0;
+        $orders = $this->orders;
+        foreach ($orders as $order) {
+            $sum += ($order->quantity) * ($order->myprice);
+        }
+        
+        return $sum;
+    }
+
 }
