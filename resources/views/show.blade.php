@@ -2,6 +2,7 @@
 
 @section('leftcontent')
 <br><br>
+<h4>Reviews voor {{ $wine->brand }} {{ $wine->name }}</h4>
 
 @endsection
 
