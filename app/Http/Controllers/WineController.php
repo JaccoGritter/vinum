@@ -47,6 +47,11 @@ class WineController extends Controller
             return view('loginwarning');
 
         } else {
+            
+            if($wine->units <= 0) {
+                return view('nostock');
+            }
+
             $user = Auth::user();
 
             $order = Order::where('user_id', $user->id)->where('wine_id', $wine->id)->where('myprice', $wine->price)->get();

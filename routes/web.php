@@ -29,6 +29,10 @@ Route::get('/loginwarning', function() {
     return view('loginwarning');
     });
 
+Route::get('/nostock', function() {
+    return view('nostock');
+    });
+
 Route::get('/addone/{id}', 'WineController@addOne')->name('addone');
 Route::get('/decreaseone/{id}', 'WineController@decreaseOne')->name('decreaseone');
 
