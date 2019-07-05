@@ -36,7 +36,7 @@
 
             <li>
                 <a href="{{ route('cart') }}"><i class="fas fa-shopping-basket fa-2x"></i></a>
-                <b>{{ Auth::check() ? count(Auth::user()->wines) : '' }}</b>
+                <b>{{ Auth::check() ? Auth::user()->getCartQuantity() : '' }}</b>
             </li>
 
             <li>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</li>

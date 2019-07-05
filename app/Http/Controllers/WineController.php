@@ -43,26 +43,38 @@ class WineController extends Controller
             return view('loginwarning');
 
         } else {
-
             $user = Auth::user();
-            $order = new Order;
-            $order->user_id = $user->id;
-            $order->wine_id = $wine->id;
-            $order->quantity = 1;
-            $order->price = $wine->price;
 
-            $order->save();
+            $order = Order::where('user_id', $user->id)->where('wine_id', $wine->id)->where('myprice', $wine->price)->get();
+
+            if(!$order->isEmpty()) {
+                $order = $order->first();
+                $order->increment('quantity');
+            } else {
+                $order = new Order;
+                $order->user_id = $user->id;
+                $order->wine_id = $wine->id;
+                $order->quantity = 1;
+                $order->myprice = $wine->price;
+
+                $order->save(); 
+            }
 
             $wine->decrement('units');
-
             return view('addtocart', compact('wine'));
+
         }
 
     }
 
     public function cart() {
-        $wines = Auth::user()->wines;
-        return view('cart', compact('wines'));
+        if (!Auth::check()) {
+            return view('loginwarning');
+
+        } else {
+            $wines = Auth::user()->wines;
+            return view('cart', compact('wines'));
+        }
     }
 
 }

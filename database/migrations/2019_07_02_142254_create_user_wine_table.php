@@ -18,7 +18,7 @@ class CreateUserWineTable extends Migration
             $table->unsignedInteger('wine_id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('quantity')->default(0);
-            $table->double('price');
+            $table->double('myprice');
             $table->timestamps();
         });
     }
