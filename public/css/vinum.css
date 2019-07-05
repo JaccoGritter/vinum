@@ -76,6 +76,7 @@ body {
     color: white;
 }
 
-/* .page-item active page-link {
-    background-color: yellow;
-} */
+.page-item.active .page-link {
+    background-color: #DEC2D4;
+    color: black;
+}
