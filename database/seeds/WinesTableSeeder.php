@@ -68,15 +68,15 @@ class WinesTableSeeder extends Seeder
                
             ],
             [
-                'brand' => 'Lindemans',
-                'name' => 'Cabernet Merlot',
+                'brand' => 'Monkey Business',
+                'name' => 'Yummy',
                 'variety' => 'Rood',
-                'grapes' => 'Cabernet Merlot',
-                'country' => 'Zuid-Afrika',
+                'grapes' => 'Shiraz',
+                'country' => 'Australië',
                 'alcperc' => 13.5,
                 'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
                 'units' => 10,
-                'price' => 7.85,
+                'price' => 6.45,
                 'created_at' => new DateTime,
                 'updated_at' => null,
                 
