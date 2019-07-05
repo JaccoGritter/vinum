@@ -10,6 +10,10 @@ use Auth;
 class WineController extends Controller
 {
 
+    public function about() {
+        return view('about');
+    }
+
     public function index() {
         // voorlopig een random aanbieding
         $number = rand(1, 10);

@@ -17,6 +17,8 @@ Route::get('/', 'WineController@index')->name('index');
 
 Route::get('/search', 'WineController@searchWines');
 
+Route::get('/about', 'WineController@about')->name('about');
+
 Route::get('/show/{wine}', 'WineController@show')->name('show');
 
 Route::get('/cart', 'WineController@cart')->name('cart');

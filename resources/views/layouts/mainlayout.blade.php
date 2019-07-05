@@ -23,7 +23,7 @@
     <div class="mynavbar">
         <ul>
 
-            <li><a href="#">OVER</a></li>
+            <li><a href="{{ route('about') }}">OVER</a></li>
             <li><a href="{{ route('login') }}">LOGIN</a></li>
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
