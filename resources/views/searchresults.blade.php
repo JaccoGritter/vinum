@@ -24,6 +24,7 @@
 <br>
 <div  class="text-left">
 <h3>We hebben voor u gevonden:</h3>
+<p>klik op de afbeelding voor meer info</p>
 </div>
 
 @foreach ($wines as $wine)
