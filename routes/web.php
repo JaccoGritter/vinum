@@ -19,6 +19,8 @@ Route::get('/search', 'WineController@searchWines');
 
 Route::get('/show/{wine}', 'WineController@show')->name('show');
 
+Route::get('/cart', 'WineController@cart')->name('cart');
+
 Route::get('/addtocart/{wine}', 'WineController@addToCart')->name('addtocart');
 
 Route::get('/loginwarning', function() {

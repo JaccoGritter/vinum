@@ -35,7 +35,7 @@
             <li><a href="{{ route('register') }}">REGISTREER</a></li>
 
             <li>
-                <a href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
+                <a href="{{ route('cart') }}"><i class="fas fa-shopping-basket fa-2x"></i></a>
                 <b>{{ Auth::check() ? count(Auth::user()->wines) : '' }}</b>
             </li>
 

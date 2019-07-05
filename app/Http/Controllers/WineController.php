@@ -59,4 +59,10 @@ class WineController extends Controller
         }
 
     }
+
+    public function cart() {
+        $wines = Auth::user()->wines;
+        return view('cart', compact('wines'));
+    }
+
 }
