@@ -1,6 +1,6 @@
 @extends('layouts.mainlayout')
 
-@section('leftcontent')
+@section('rightcontent')
 
 <br><br>
 <h4>{{ $wine->brand }} {{ $wine->name }} toegevoegd aan je winkelmandje</h4>
