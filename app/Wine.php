@@ -11,6 +11,11 @@ class Wine extends Model
         return $this->belongsToMany('App\User');
     }
 
+    public function order()
+    {
+        return $this->hasOne('App\Order');
+    }
+
     public function picture(){
         if (file_exists( public_path() . '/img/winepics/wijn'.$this->id.'.jpg')) {
             return '/img/winepics/wijn'.$this->id.'.jpg';

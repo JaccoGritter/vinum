@@ -67,6 +67,28 @@ class WineController extends Controller
 
     }
 
+    public function addOne($id) {
+        $order = Order::findOrFail($id);
+        $wine = Wine::findOrFail($order->wine_id);
+        $order->increment('quantity');
+        $wine->decrement('units');
+
+        $wines = Auth::user()->wines;
+        return view('cart', compact('wines'));
+
+    }
+
+    public function decreaseOne($id) {
+        $order = Order::findOrFail($id);
+        $wine = Wine::findOrFail($order->wine_id);
+        $order->decrement('quantity');
+        $wine->increment('units');
+        
+        $wines = Auth::user()->wines;
+        return view('cart', compact('wines'));
+
+    }
+
     public function cart() {
         if (!Auth::check()) {
             return view('loginwarning');

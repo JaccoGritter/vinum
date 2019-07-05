@@ -80,3 +80,12 @@ body {
     background-color: #DEC2D4;
     color: black;
 }
+
+.add {
+    color:#DEC2D4;
+}
+
+.add:hover {
+    color:#fff;
+}
+

@@ -27,6 +27,9 @@ Route::get('/loginwarning', function() {
     return view('loginwarning');
     });
 
+Route::get('/addone/{id}', 'WineController@addOne')->name('addone');
+Route::get('/decreaseone/{id}', 'WineController@decreaseOne')->name('decreaseone');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
