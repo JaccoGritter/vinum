@@ -120,7 +120,7 @@ class WineController extends Controller
         return view('createreview', compact('wine'));
     }
     
-    public function addReview(Wine $wine){
+    public function addReview(Request $request){
 
         return view('addreview', compact('wine'));
     }
