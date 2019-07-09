@@ -8,12 +8,16 @@ class Wine extends Model
 {
     public function users()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany(User::class);
     }
 
     public function order()
     {
         return $this->hasOne('App\Order');
+    }
+
+    public function reviews() {
+        return $this->hasMany(Review::class);
     }
 
     public function picture(){

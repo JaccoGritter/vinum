@@ -19,8 +19,8 @@
         </div>
 
         <div class="form-group col-md-8">
-            <!-- <label for="comments">Review:</label> -->
-            <textarea class="form-control" name="comments" placeholder="Review" rows="3" id="comments" value="{{old('comments')}}"></textarea>
+            <!-- <label for="comment">Review:</label> -->
+            <textarea class="form-control" name="comment" placeholder="Review" rows="3" id="comment" value="{{old('comment')}}"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary mb-1">Voeg toe</button>

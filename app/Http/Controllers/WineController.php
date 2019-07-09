@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Wine;
 use App\Order;
+use App\Review;
 use Auth;
 
 class WineController extends Controller
@@ -121,6 +122,19 @@ class WineController extends Controller
     }
     
     public function addReview(Request $request){
+
+        $review = new Review;
+        $review->wine_id = $request->get('wine_id');
+        if ($request->screen_name == "") {
+            $review->screen_name = 'Anoniem';
+            } else {
+                $review->screen_name = $request->get('screen_name');
+            }
+        $review->user_id = Auth::id();
+        $review->stars = $request->get('stars');
+        $review->comment = $request->get('comment');
+
+        $review->save();
 
         return view('addreview', compact('wine'));
     }
