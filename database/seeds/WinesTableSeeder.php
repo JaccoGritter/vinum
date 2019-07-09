@@ -160,6 +160,21 @@ class WinesTableSeeder extends Seeder
                 'created_at' => new DateTime,
                 'updated_at' => null,
                 
+            ],
+            [
+                'id' => 11,
+                'brand' => 'Miss Piggy',
+                'name' => 'Pink & Fresh',
+                'variety' => 'Rosé',
+                'grapes' => 'Grenache',
+                'country' => 'Australië',
+                'alcperc' => 10.7,
+                'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
+                'units' => 10,
+                'price' => 4.75,
+                'created_at' => new DateTime,
+                'updated_at' => null,
+                
             ]
         ];
 

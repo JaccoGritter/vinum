@@ -24,7 +24,7 @@
 <p>----------------------------</p>
 @endforeach
 
-@else <h4>Er zijn nog geen reviews voor deze wijn</h4>
+@else <br><br><br><h4>Er zijn nog geen reviews voor deze wijn</h4>
 
 @endif
 
