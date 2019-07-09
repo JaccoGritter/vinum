@@ -81,7 +81,7 @@ class WineController extends Controller
     public function addOne($id) {
         $order = Order::findOrFail($id);
         $wine = Wine::findOrFail($order->wine_id);
-        if ($wine->units > 0) {
+        if ($wine->units >= 1) {
             $order->increment('quantity');
             $wine->decrement('units');
         }
@@ -93,7 +93,7 @@ class WineController extends Controller
     public function decreaseOne($id) {
         $order = Order::findOrFail($id);
         $wine = Wine::findOrFail($order->wine_id);
-        if ($order->quantity > 0) {
+        if ($order->quantity >= 1) {
             $order->decrement('quantity');
             $wine->increment('units');
             if ($order->quantity == 0) {
