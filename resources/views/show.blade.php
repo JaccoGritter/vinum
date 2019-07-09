@@ -73,7 +73,9 @@
 <div>
 
     <a href="{{ route('addtocart', $wine->id) }}" class="btn btn-primary" role="button">In Mandje</a>
+    @if ( Auth::check() )
     <a href="{{ route('createreview', $wine->id) }}" class="btn btn-primary" role="button">Schrijf Review</a>
+    @endif
     <a href="/" class="btn btn-primary" role="button">Home</a>
 </div>
 
