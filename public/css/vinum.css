@@ -6,7 +6,7 @@ body {
 
 @media only screen and (max-width: 812px) {
     .checkwidth { 
-        display: none;
+        height: 15%;
     }
 }
 
@@ -89,3 +89,6 @@ body {
     color:#fff;
 }
 
+table {
+    font-size: 0.85rem;
+}

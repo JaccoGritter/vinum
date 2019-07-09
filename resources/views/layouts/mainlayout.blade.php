@@ -44,11 +44,11 @@
         </ul>
     </div>
 
-    <div class="container-fluid maincontainer pl-5 pr-5">
+    <div class="container maincontainer pr-4">
         <div class="row">
             <div class="col-md-6 containerleft pl-5 pr-1">
-             <img src="{{ asset('img/vinumlogo.jpg') }}" alt="logo" height=240>
-             <img src="{{ asset('img/slogan.png') }}" alt="slogan" height=200 class="checkwidth">
+             <img src="{{ asset('img/vinumlogo.jpg') }}" alt="logo" height=240 class="checkwidth">
+             <img src="{{ asset('img/slogan.png') }}" alt="slogan" height=150 class="checkwidth">
                 @yield('leftcontent')
             </div>
 
