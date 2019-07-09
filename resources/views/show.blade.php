@@ -11,14 +11,15 @@
 @foreach($wine->reviews->reverse() as $review)
 
 <p><b>{{ $review->screen_name }}</b> gaf de wijn
-    <?php
-    for ($i = 0; $i < $review->stars; $i++) {
-        echo ('<i class="fas fa-star"></i>');
-    }
-    for ($i = $review->stars; $i < 5; $i++) {
-        echo ('<i class="far fa-star"></i>');
-    }
-    ?>
+
+    @for ($i = 0; $i < $review->stars; $i++)
+        <i class="fas fa-star"></i>
+    @endfor
+
+    @for ($i = $review->stars; $i < 5 ; $i++)
+        <i class="far fa-star"></i>
+    @endfor
+
 </p>
 <p>{{ $review->comment}}</p>
 <p>----------------------------</p>
