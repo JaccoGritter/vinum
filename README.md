@@ -38,5 +38,5 @@ User stories still to implement
 </ul>
 
 All shop owner stories still need implementation: <br>
-As shop owner I want to be able to add/delete/update/see products in my system0
+As shop owner I want to be able to add/delete/update/see products in my system
 .....
