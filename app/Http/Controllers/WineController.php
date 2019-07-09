@@ -16,9 +16,9 @@ class WineController extends Controller
 
     public function index() {
         // voorlopig een random aanbieding
-        //$number = rand(1, 10);
-        $number = 5;
-        $wine = Wine::find($number);
+        //$offer = rand(1, 10);
+        $offer = 5;
+        $wine = Wine::find($offer);
         
         return view('index', compact('wine'));
 
