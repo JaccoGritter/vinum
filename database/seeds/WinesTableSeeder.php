@@ -13,6 +13,7 @@ class WinesTableSeeder extends Seeder
     {
         $wines = [
             [
+                'id' => 1,
                 'brand' => 'Lindemans',
                 'name' => 'Bin 65',
                 'variety' => 'Wit',
@@ -26,6 +27,7 @@ class WinesTableSeeder extends Seeder
                 'updated_at' => null,
             ],
             [
+                'id' => 2,
                 'brand' => 'Lindemans',
                 'name' => 'Cabernet Merlot',
                 'variety' => 'Rood',
@@ -40,6 +42,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 3,
                 'brand' => 'Lindemans',
                 'name' => 'Bin 85',
                 'variety' => 'Wit',
@@ -54,9 +57,10 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 4,
                 'brand' => 'Lindemans',
-                'name' => 'Western Cape Rose',
-                'variety' => 'Rose',
+                'name' => 'Western Cape Rosé',
+                'variety' => 'Rosé',
                 'grapes' => 'Pinotage',
                 'country' => 'Zuid-Afrika',
                 'alcperc' => 12.7,
@@ -68,6 +72,7 @@ class WinesTableSeeder extends Seeder
                
             ],
             [
+                'id' => 5,
                 'brand' => 'Monkey Business',
                 'name' => 'Yummy',
                 'variety' => 'Rood',
@@ -82,6 +87,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 6,
                 'brand' => 'Torres',
                 'name' => 'Natureo',
                 'variety' => 'Rood',
@@ -96,6 +102,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 7,
                 'brand' => 'Les Dauphins',
                 'name' => 'Cote du Rhone',
                 'variety' => 'Rood',
@@ -110,6 +117,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 8,
                 'brand' => 'Ogio',
                 'name' => 'Pinot Grigio',
                 'variety' => 'Wit',
@@ -124,6 +132,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 9,
                 'brand' => 'Oveja Negra',
                 'name' => 'Chardonnay Viognier',
                 'variety' => 'Wit',
@@ -138,6 +147,7 @@ class WinesTableSeeder extends Seeder
                 
             ],
             [
+                'id' => 10,
                 'brand' => 'Slurp',
                 'name' => 'Rosé',
                 'variety' => 'Rosé',
