@@ -26,8 +26,10 @@
 </div>
 
 <div>
+
+<a href="{{ route('addtocart', $wine->id) }}" class="btn btn-primary" role="button">In Mandje</a>
+<a href="{{ route('createreview', $wine->id) }}" class="btn btn-primary" role="button">Schrijf Review</a>
 <a href="/" class="btn btn-primary" role="button">Home</a>
-<a href="{{ route('addtocart', $wine->id) }}" class="btn btn-primary" role="button">In winkelmandje</a>
 </div>
 
 @endsection

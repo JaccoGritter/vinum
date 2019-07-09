@@ -115,4 +115,14 @@ class WineController extends Controller
         }
     }
 
+    public function createReview(Wine $wine){
+
+        return view('createreview', compact('wine'));
+    }
+    
+    public function addReview(Wine $wine){
+
+        return view('addreview', compact('wine'));
+    }
+
 }

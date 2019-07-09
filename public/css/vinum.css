@@ -14,9 +14,9 @@ body {
     z-index: 5;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
-    padding-top: 18px;
+    padding-top: 8px;
     width: 100%;
-    height: 3.75rem;
+    height: 48px;
     background-color: #7B0954;
     position: fixed;
 }
@@ -41,7 +41,7 @@ body {
 
 .maincontainer {
     font-family: 'Montserrat', sans-serif;
-    padding-top: 80px;
+    padding-top: 72px;
 }
 
 .containerright {

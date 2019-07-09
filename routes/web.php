@@ -25,6 +25,10 @@ Route::get('/cart', 'WineController@cart')->name('cart');
 
 Route::get('/addtocart/{wine}', 'WineController@addToCart')->name('addtocart');
 
+Route::get('/createreview/{wine}', 'WineController@createReview')->name('createreview');
+
+Route::post('/addreview', 'WineController@addReview')->name('addreview');
+
 Route::get('/loginwarning', function() {
     return view('loginwarning');
     });
