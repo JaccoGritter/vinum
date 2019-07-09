@@ -55,8 +55,8 @@ class WinesTableSeeder extends Seeder
             ],
             [
                 'brand' => 'Lindemans',
-                'name' => 'Western Cape Rosé',
-                'variety' => 'Rosé',
+                'name' => 'Western Cape Rose',
+                'variety' => 'Rose',
                 'grapes' => 'Pinotage',
                 'country' => 'Zuid-Afrika',
                 'alcperc' => 12.7,
