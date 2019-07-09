@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-6 containerleft pl-5 pr-1">
              <img src="{{ asset('img/vinumlogo.jpg') }}" alt="logo" height=240>
-             <img src="{{ asset('img/slogan.png') }}" alt="slogan" class="checkwidth">
+             <img src="{{ asset('img/slogan.png') }}" alt="slogan" height=200 class="checkwidth">
                 @yield('leftcontent')
             </div>
 
