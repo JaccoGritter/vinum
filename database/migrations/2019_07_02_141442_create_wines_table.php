@@ -14,7 +14,7 @@ class CreateWinesTable extends Migration
     public function up()
     {
         Schema::create('wines', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('brand');
             $table->string('name');
             $table->string('variety');
