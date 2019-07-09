@@ -4,7 +4,7 @@ Try it out, it is pretty much self-explanatory!
 
 https://stormy-plains-43896.herokuapp.com/
 
-<img src='/img/screenshot.jpg'>
+<img src='img/screenshot.jpg' alt="Vinum screenshot">
 
 User stories implemented:
 
