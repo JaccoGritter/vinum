@@ -136,7 +136,7 @@ class WineController extends Controller
 
         $review->save();
 
-        return view('addreview', compact('wine'));
+        return view('addreview');
     }
 
 }
