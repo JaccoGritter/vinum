@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\WineController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,10 @@ Route::get('/nostock', function() {
 
 Route::get('/addone/{id}', 'WineController@addOne')->name('addone');
 Route::get('/decreaseone/{id}', 'WineController@decreaseOne')->name('decreaseone');
+
+Route::get('/pay', 'PaymentController@preparePayment')->name('pay');
+Route::get('/orderresponse', 'PaymentController@orderResponse')->name('orderresponse');
+Route::name('webhooks.mollie')->post('webhooks/mollie', 'MollieWebhookController@handle');
 
 Auth::routes();
 

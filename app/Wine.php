@@ -11,9 +11,9 @@ class Wine extends Model
         return $this->belongsToMany(User::class);
     }
 
-    public function order()
+    public function orders()
     {
-        return $this->hasOne('App\Order');
+        return $this->hasMany(Order::class);
     }
 
     public function reviews() {
