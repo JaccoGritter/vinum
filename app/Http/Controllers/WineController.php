@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Mollie\Laravel\Facades\Mollie;
 use App\Wine;
 use App\Order;
 use App\Review;
