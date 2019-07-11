@@ -139,4 +139,9 @@ class WineController extends Controller
         return view('addreview');
     }
 
+    public function checkout() {
+        $wines = Auth::user()->wines;
+        return view('checkout', compact('wines'));
+    }
+
 }

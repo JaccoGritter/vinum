@@ -1,5 +1,11 @@
 @extends('layouts.mainlayout')
 
+@section('leftcontent')
+
+Uw gegevens
+
+@endsection
+
 @section('rightcontent')
 
 <br><br>
@@ -17,6 +23,6 @@
             </table>
         </div>
 
-        <a href="{{ route('checkout') }}" class="btn btn-primary" role="button">Naar Kassa</a>
-        <a href="/" class="btn btn-primary" role="button">Verder winkelen</a>
+        <a href="{{ route('pay') }}" class="btn btn-primary" role="button">Betalen</a>
+        
 @endsection

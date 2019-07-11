@@ -42,6 +42,8 @@ Route::get('/addone/{id}', 'WineController@addOne')->name('addone');
 Route::get('/decreaseone/{id}', 'WineController@decreaseOne')->name('decreaseone');
 
 Route::get('/pay', 'PaymentController@preparePayment')->name('pay');
+Route::name('checkout')->get('/checkout', 'WineController@checkout');
+
 Route::get('/orderresponse', 'PaymentController@orderResponse')->name('orderresponse');
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'MollieWebhookController@handle');
 
