@@ -47,7 +47,10 @@ class PaymentController extends Controller
             case 'paid':
                 $msg = "De betaling is gelukt. Hartelijk dank!";
                 $orders = Order::where('user_id', Auth::user()->id)->get();
-                foreach ($orders as $order) $order->delete();
+                foreach ($orders as $order) { 
+                    $order->status = 'paid';
+                    $order->save();
+                }
                 break;
             case 'canceled':
                 $msg = "De betaling is afgebroken. Probeer het opnieuw";
@@ -61,7 +64,10 @@ class PaymentController extends Controller
             case 'open':
                 $msg = "De betaling staat open. U krijgt bericht zodra de betaling is goedgekeurd";
                 $orders = Order::where('user_id', Auth::user()->id)->get();
-                foreach ($orders as $order) $order->delete();
+                foreach ($orders as $order) {
+                    $order->status = 'pending';
+                    $order->save();
+                }
                 break;
             default:
                 $msg = $payment->status;
