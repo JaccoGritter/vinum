@@ -48,12 +48,12 @@ class User extends Authenticatable
     }
 
     public function getCartQuantity() {
-        return $this->orders->sum('quantity');
+        return $this->orders->where('status', 'open')->sum('quantity');
     }
 
     public function getOrderValue() {
         $sum = 0;
-        $orders = $this->orders;
+        $orders = $this->orders->where('status', 'open');
         foreach ($orders as $order) {
             $sum += ($order->quantity) * ($order->myprice);
         }
