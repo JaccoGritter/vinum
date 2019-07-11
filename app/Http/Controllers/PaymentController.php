@@ -49,6 +49,7 @@ class PaymentController extends Controller
                 $orders = Order::where('user_id', Auth::user()->id)->get();
                 foreach ($orders as $order) { 
                     $order->status = 'paid';
+                    $order->mollie_paymentid = session('payment_id');
                     $order->save();
                 }
                 break;
