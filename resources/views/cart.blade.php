@@ -17,6 +17,10 @@
             </table>
         </div>
 
-        <a href="{{ route('checkout') }}" class="btn btn-primary" role="button">Naar Kassa</a>
+        @if (Auth::check() && Auth::user()->getCartQuantity() > 0)
+            <a href="{{ route('checkout') }}" class="btn btn-primary" role="button">Naar Kassa</a>
+        @endif
+
         <a href="/" class="btn btn-primary" role="button">Verder winkelen</a>
+
 @endsection
