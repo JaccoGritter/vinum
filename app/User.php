@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function wines()
     {
-        return $this->belongsToMany('App\Wine')->withPivot('quantity', 'myprice');
+        return $this->belongsToMany('App\Wine')->withPivot('quantity', 'myprice', 'id');
     }
 
     public function orders()

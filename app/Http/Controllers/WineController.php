@@ -56,7 +56,7 @@ class WineController extends Controller
 
             $user = Auth::user();
 
-            $order = Order::where('user_id', $user->id)->where('wine_id', $wine->id)->where('myprice', $wine->price)->get();
+            $order = Order::where('user_id', $user->id)->where('wine_id', $wine->id)->get();
 
             if(!$order->isEmpty()) {
                 $order = $order->first();
